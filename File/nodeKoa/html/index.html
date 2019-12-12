@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<body>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple -mobile-web-app-status-bar-style" content="black">
+        <meta name="format-de tection" content="telephone=no">
+        <meta name="applicable-device" content="mobile">
+        <title>node-koa</title>
+        <meta name="Keywords" content="">
+        <meta name="Description" content="">
+        <script type="text/javascript" src="../jquery/jquery.min.js "></script>
+        <script type="text/javascript" src="../api/url.js"></script>
+
+        <script>
+
+            // $.ajax({
+            //     type: 'get',
+            //     url: 'http://localhost:3002?user=srtian&age=18',
+            //     success: function (data) {
+            //         console.log(data);
+            //     },
+            //     error: function () {
+            //         console.log('errorxxxxxx');
+            //     }
+            // })
+
+            $.ajax({
+                type: 'post',
+                dataType: 'JSON',
+                contentType: 'application/json',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                data: {
+                    "user": 'srtian',
+                    "age": 18,
+                },  
+                url: dataUserUrl + '/addHero',
+                // url: 'http://localhost:3002/',
+                success: function (data) {
+                    console.log('xxxx' + data);
+                },
+                error: function () {
+                    console.log('errorxxxxxx');
+                }
+            })
+
+
+        </script>
+    </head>
+</body>
+
+</html>
